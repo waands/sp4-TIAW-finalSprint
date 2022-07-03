@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/signupstyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel = "icon" href = "./imgs/icon.png">
+    <script src="./scripts/signup.js"></script>
+    <title>Security Virtual Classes</title>
+</head>
+
+<body class = "body">
+    <header class="container-fluid header">
+        <div class="col-12 header-area">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-2 col-lg-2 logo">
+              <div class="row">
+                <img
+                  src="./imgs/logoDesktop.png"
+                  class="logoImg"
+                  href="home.html"
+                />
+                <img
+                  src="./imgs/logoMobile.png"
+                  class="logoMobileImg"
+                  href="home.html"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+    <div>
+        <div>
+          <div>
+            <div>
+                <div id="login-box" class="row col-md-12 mx-auto">
+                    <form id="login-form" class="form col-12" method="post" onsubmit="loginUser (this)">
+                        <p class="title">Cadastro</p>
+                        <a href = "login.html"><p class = "hasaccount">Já possui uma conta ?</p></a>
+                        <div class = "mx-auto row col-12 col-lg-8 register-box">
+                        <div class = "col-12">
+                            <label for="login" class="text-cad">Usuário</label><br>
+                            <input type="text" name="txt_login" id="txt_login" class="form-control">
+                        </div>
+                        <div class = "col-12">
+                            <label for="nome" class="text-cad">Nome completo</label><br>
+                            <input type="text" name="txt_nome" id="txt_nome" class="form-control">
+                        </div>
+                        <div class = "col-12">
+                            <label for="email" class="text-cad">Email</label><br>
+                            <input type="text" name="txt_email" id="txt_email" class="form-control">
+                        </div>
+                        <div class = "col-12">
+                            <label for="senha" class="text-cad">Senha</label><br>
+                            <input type="password" name="txt_senha" id="txt_senha" class="form-control">
+                        </div>
+                        <div class = "col-12">
+                            <label for="senha2" class="text-cad">Confirmar senha</label><br>
+                            <input type="password" name="txt_senha2" id="txt_senha2" class="form-control">
+                        </div>
+                       
+                        <div class = "col-12 col-lg-4">
+                            <label for="birth" class="text-cad">Data de nascimento</label><br>
+                            <input type="date" name="txt_birth" id="txt_birth" class="form-control">
+                        </div>
+                        <div class = "col-12 col-lg-8">
+                            <label for="tel" class="text-cad">Telefone</label><br>
+                            <input type="tel" name="txt_tel" id="txt_tel" class="form-control">
+                        </div>
+                        
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <div class="button-area col-12">
+              <button type="button" class="btn btn-secondary">Cancelar</button>
+              <button type="button" id="btn_salvar" class="btn btn-info">Cadastrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class = "footer">
+          <p class= "text-cad">SVC © todos os direitos reservados</p>
+      </footer>
+      <script>
+        
+        // Declara uma função para processar o formulário de login
+        function processaFormLogin (event) {                
+                // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+                event.preventDefault ();
+
+                // Obtem os dados de login e senha a partir do formulário de login
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+
+                // Valida login e se estiver ok, redireciona para tela inicial da aplicação
+                resultadoLogin = loginUser (username, password);
+                if (resultadoLogin) {
+                    window.location.href = 'index.html';
+                }
+                else { // Se login falhou, avisa ao usuário
+                    alert ('Usuário ou senha incorretos');
+                }
+        }
+
+        function salvaLogin (event) {
+            // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+            event.preventDefault ();
+
+            // Obtem os dados do formulário
+            let login  = document.getElementById('txt_login').value;
+            let nome   = document.getElementById('txt_nome').value;
+            let email  = document.getElementById('txt_email').value;
+            let senha  = document.getElementById('txt_senha').value;
+            let senha2 = document.getElementById('txt_senha2').value;
+            let birth = document.getElementById('txt_birth').value;
+            let tel = document.getElementById('txt_tel').value;
+
+            if (senha != senha2) {
+                alert ('As senhas informadas não conferem.');
+                return
+            }
+            console.log(login, nome, email,senha);
+            // Adiciona o usuário no banco de dados
+            addUser (nome, login, senha, email ,birth ,tel);
+            alert ('Usuário salvo com sucesso. Proceda com o login para ir a home');
+
+            // Oculta a div modal do login
+            //document.getElementById ('loginModal').style.display = 'none';
+            $('#loginModal').modal('hide');
+        }
+
+        // Associa a funçao processaFormLogin  formulário adicionado um manipulador do evento submit
+        document.getElementById ('login-form').addEventListener ('submit', processaFormLogin);
+
+
+        // Associar salvamento ao botao
+        document.getElementById ('btn_salvar').addEventListener ('click', salvaLogin);        
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

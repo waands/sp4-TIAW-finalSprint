@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Security Virtual Classes</title>
+    <link rel="stylesheet" href="./styles/myprofilestyle.css" />
+    <link rel="shortcut icon" href="../imgs/favicon.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body onload="initUser()">
+    <header class="container-fluid header">
+      <div class="col-12 header-area">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-2 col-lg-2 logo">
+            <div class="row">
+              <img
+                src="./imgs/logoDesktop.png"
+                href="home.html"
+                class="logoImg"
+              />
+              <img
+                src="./imgs/logoMobile.png"
+                href="home.html"
+                class="logoMobileImg"
+              />
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-10 col-lg-10 navbar">
+            <nav class="col-12 navbar">
+              <a class="nav-item nav-link col-3 col-md-3" href="home.html"
+                >Home</a
+              >
+              <a class="nav-item nav-link col-3 col-md-3" href="modules.html"
+                >Módulos</a
+              >
+              <a class="nav-item nav-link col-3 col-md-3" href="forum.html"
+                >Fórum</a
+              >
+              <a
+                class="nav-item nav-link active col-3 col-md-3"
+                aria-current="page"
+                href="#"
+                >Conta</a
+              >
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div>
+        <div class="row gx-0">
+          <p></p>
+        </div>
+        <p class="title">Seu Perfil</p>
+        <div class="carde">
+          <div class="main-card">
+            <div class="imgdiv">
+              <img src="./imgs/user.png" alt="profile img" /><span
+                class="purpler"
+                >Alterar senha
+                <img onclick="updatePassword()" src="../imgs/pencil.png"
+              /></span>
+            </div>
+            <div class="info">
+              <p>
+                <span class="pre">Nome: </span>
+                <span>
+                  <span id="nameSpan"></span
+                  ><img onclick="updateName()" src="../imgs/pencil.png"
+                /></span>
+              </p>
+              <p>
+                <span class="pre">Email: </span
+                ><span>
+                  <span id="emailSpan"></span
+                  ><img onclick="updateEmail()" src="../imgs/pencil.png"
+                /></span>
+              </p>
+              <div>
+                <p>
+                  <span class="pre">Ingressou:</span>
+                  <span id="createdAtSpan"></span>
+                </p>
+                <p>
+                  <span class="pre">Nascimento:</span>
+                  <span id="birthSpan"></span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="solucoes">
+          <span>Soluções:</span
+          ><span class="purpler" id="solutionsSpan">62</span>
+        </div>
+      </div>
+    </main>
+    <footer class="container footer">
+      <div class="row">
+        <div>SVC © todos os direitos reservados - 2022</div>
+      </div>
+    </footer>
+    <script src="./scripts/myprofile.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

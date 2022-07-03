@@ -1,0 +1,216 @@
+.title {
+  color: #33335f;
+  font-size: 40px;
+  text-align: center;
+}
+
+.container {
+  margin-top: 10px;
+}
+.contentBox {
+  background-color: #ededf0;
+  border-radius: 10px;
+}
+
+.content {
+  padding: 10px;
+}
+
+.contentTitle {
+  color: #33335f;
+  text-align: center;
+  padding-top: 10px !important;
+}
+
+.contentSinopse {
+  color: #9797b0;
+  margin: 10px;
+}
+
+.contentButtom {
+  background-color: #ffffff !important;
+  color: #33335f !important;
+  margin: 5px 5px;
+  text-align: center !important;
+}
+
+.contentButtom .btn:hover {
+  border-color: #33335f !important;
+  background-color: #f7f7f8 !important;
+}
+
+.info {
+  margin-right: 0px;
+  text-align: end;
+  vertical-align: bottom;
+}
+
+.contentSize {
+  margin-left: 20px;
+  color: #9797b0;
+}
+
+.contentDate {
+  margin-left: 20px;
+  color: #9797b0;
+}
+
+.accordion-body {
+  background-color: #ededf0 !important;
+  margin-top: -10px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px !important;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  text-align: center;
+  border-style: hidden !important;
+}
+
+.accordionContent {
+  margin-top: 13px;
+  color: #9797b0;
+  border-bottom: ridge #bdbdd3 1px;
+}
+
+.accordionContent .accPartTitle {
+  color: #33335f;
+}
+
+.accPartCont {
+  margin: 8px;
+}
+
+.accordion-body .btn:hover {
+  background-color: #f6f6f9 !important;
+  border-color: #ededf0;
+}
+
+/*-------------------------------------------------------------------------header + footer*/
+
+body {
+  background-color: #f6f6f9 !important;
+}
+
+/*Mobile*/
+.logo {
+  background-color: #33335f;
+}
+
+/*imagem*/
+.header img {
+  width: 60%;
+  align-items: left;
+  margin: 0.4em;
+  max-width: 190px;
+}
+
+.logoMobileImg {
+  display: flex;
+}
+
+.logoImg {
+  display: none;
+}
+
+/*menu*/
+.navbar {
+  background-color: none;
+
+  vertical-align: top;
+  margin-top: -16px;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  width: 100%;
+}
+
+/*itens do menu*/
+.navbar a {
+  color: #33335f;
+  font-size: medium;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 5px;
+  text-align: center;
+}
+
+.navbar a.active {
+  color: #f6f6f9 !important;
+  font-weight: bold;
+  font-size: large;
+  background-color: #33335f;
+}
+
+.navbar a:hover {
+  background-color: #ededf0;
+  color: #33335f;
+}
+
+.navbar a:hover.active {
+  background-color: #33335f;
+}
+
+/*Desktop*/
+@media screen and (min-width: 728px) {
+  .header img {
+    width: 50%;
+    max-width: 150px;
+    align-items: left;
+    margin: 0.8em;
+  }
+
+  .logoMobileImg {
+    display: none;
+  }
+
+  .logoImg {
+    display: flex;
+  }
+
+  .navbar {
+    background-color: #33335f;
+
+    align-items: center;
+
+    margin-top: 0;
+  }
+
+  .navbar nav {
+    width: 70%;
+    margin-left: 25%;
+  }
+
+  .navbar a {
+    color: #bdbdd3;
+    font-size: large;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .navbar a:hover {
+    background-color: #2a2a55;
+    color: #f6f6f9;
+  }
+
+  .navbar a.active {
+    color: #f6f6f9 !important;
+    font-weight: bold;
+    font-size: x-large;
+    background-color: #33335f;
+  }
+
+  .navbar a:hover.active {
+    background-color: #2a2a55;
+  }
+
+  .footer {
+    text-align: center;
+    color: #33335f;
+    padding: 10px;
+  }
+}

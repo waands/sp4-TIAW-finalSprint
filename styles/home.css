@@ -1,0 +1,150 @@
+body {
+  background: #f6f6f9;
+  color: #33335f;
+}
+
+.coisa {
+  text-align: center;
+}
+
+.title {
+  color: #33335f;
+  font-size: 40px;
+}
+
+.carousel-item {
+  height: 300px;
+}
+
+.carousel {
+  height: 200px;
+  width: 100%;
+}
+
+/*-------------------------------------------------------------------------header + footer*/
+
+body {
+  background-color: #f6f6f9 !important;
+}
+
+/*Mobile*/
+.logo {
+  background-color: #33335f;
+}
+
+/*imagem*/
+.header img {
+  width: 60%;
+  align-items: left;
+  margin: 0.4em;
+  max-width: 190px;
+}
+
+.logoMobileImg {
+  display: flex;
+}
+
+.logoImg {
+  display: none;
+}
+
+/*menu*/
+.navbar {
+  background-color: none;
+
+  vertical-align: top;
+  margin-top: -16px;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  width: 100%;
+}
+
+/*itens do menu*/
+.navbar a {
+  color: #33335f;
+  font-size: medium;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 5px;
+  text-align: center;
+}
+
+.navbar a.active {
+  color: #f6f6f9 !important;
+  font-weight: bold;
+  font-size: large;
+  background-color: #33335f;
+}
+
+.navbar a:hover {
+  background-color: #ededf0;
+  color: #33335f;
+}
+
+.navbar a:hover.active {
+  background-color: #33335f;
+}
+
+/*Desktop*/
+@media screen and (min-width: 728px) {
+  .header img {
+    width: 50%;
+    max-width: 150px;
+    align-items: left;
+    margin: 0.8em;
+  }
+
+  .logoMobileImg {
+    display: none;
+  }
+
+  .logoImg {
+    display: flex;
+  }
+
+  .navbar {
+    background-color: #33335f;
+
+    align-items: center;
+
+    margin-top: 0;
+  }
+
+  .navbar nav {
+    width: 70%;
+    margin-left: 25%;
+  }
+
+  .navbar a {
+    color: #bdbdd3;
+    font-size: large;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .navbar a:hover {
+    background-color: #2a2a55;
+    color: #f6f6f9;
+  }
+
+  .navbar a.active {
+    color: #f6f6f9 !important;
+    font-weight: bold;
+    font-size: x-large;
+    background-color: #33335f;
+  }
+
+  .navbar a:hover.active {
+    background-color: #2a2a55;
+  }
+
+  .footer {
+    text-align: center;
+    color: #33335f;
+    padding: 10px;
+  }
+}

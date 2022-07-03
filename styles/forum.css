@@ -1,0 +1,236 @@
+/*-----------------------------------------------------------------------------------------------------------------------------general*/
+body {
+  background-color: #f6f6f9;
+}
+/*------------------------------------------------------------------------------------------------------------------------------info*/
+.title {
+  color: #33335f;
+  font-size: 40px;
+  text-align: center;
+}
+.textd {
+  color: #9797b0;
+  font-size: 24px;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------acordion css*/
+.bt1 {
+  background-color: #ededf0;
+  color: #2a2a55;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 5px;
+  border: none;
+  border-right: 2px solid #2a2a55;
+}
+.bt2 {
+  background-color: #f6f6f9;
+  color: #2a2a55;
+  text-align: center;
+  padding: 5px;
+  border: none;
+  margin-bottom: 5px;
+}
+.botao {
+  background-color: #ededf0;
+  border-width: 0;
+  border-left-width: 2px;
+  border-left-color: #33335f;
+}
+.dados {
+  text-align: left;
+  padding-left: 20px;
+}
+.titled {
+  color: #33335f;
+  font-size: 24px;
+  font-weight: bolder;
+}
+.username {
+  color: #5327c5;
+  font-size: 12px;
+  font-style: italic;
+}
+.description {
+  color: #535374;
+  font-size: 12px;
+}
+/*---------------------------------------------------------------------------------------------------------------------respostas-acordion css*/
+.ab {
+  background-color: #ededf0;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-left: 2px solid #33335f;
+  padding-left: 20px;
+}
+.respostas {
+  color: #33335f;
+  font-size: 14px;
+}
+.rusers {
+  margin-bottom: 20px;
+}
+.blockrep {
+  border-left: 2px solid #9797b0;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+.rdescription {
+  color: #535374;
+  font-size: 12px;
+}
+.ts {
+  font-weight: bolder;
+  font-size: 8px;
+  text-decoration: underline;
+  color: #2a2a55;
+  margin-left: 50px;
+}
+/*-------------------------------------------------------------------------header + footer*/
+
+body {
+  background-color: #f6f6f9 !important;
+}
+
+/*Mobile*/
+.logo {
+  background-color: #33335f;
+}
+
+/*imagem*/
+.header img {
+  width: 60%;
+  align-items: left;
+  margin: 0.4em;
+  max-width: 190px;
+}
+
+.logoMobileImg {
+  display: flex;
+}
+
+.logoImg {
+  display: none;
+}
+
+/*menu*/
+.navbar {
+  background-color: none;
+
+  vertical-align: top;
+  margin-top: -16px;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  width: 100%;
+}
+
+/*itens do menu*/
+.navbar a {
+  color: #33335f;
+  font-size: medium;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 5px;
+  text-align: center;
+}
+
+.navbar a.active {
+  color: #f6f6f9 !important;
+  font-weight: bold;
+  font-size: large;
+  background-color: #33335f;
+}
+
+.navbar a:hover {
+  background-color: #ededf0;
+  color: #33335f;
+}
+
+.navbar a:hover.active {
+  background-color: #33335f;
+}
+
+/*Desktop*/
+@media screen and (min-width: 728px) {
+  .header img {
+    width: 50%;
+    max-width: 150px;
+    align-items: left;
+    margin: 0.8em;
+  }
+
+  .logoMobileImg {
+    display: none;
+  }
+
+  .logoImg {
+    display: flex;
+  }
+
+  .navbar {
+    background-color: #33335f;
+
+    align-items: center;
+
+    margin-top: 0;
+  }
+
+  .navbar nav {
+    width: 70%;
+    margin-left: 25%;
+  }
+
+  .navbar a {
+    color: #bdbdd3;
+    font-size: large;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .navbar a:hover {
+    background-color: #2a2a55;
+    color: #f6f6f9;
+  }
+
+  .navbar a.active {
+    color: #f6f6f9 !important;
+    font-weight: bold;
+    font-size: x-large;
+    background-color: #33335f;
+  }
+
+  .navbar a:hover.active {
+    background-color: #2a2a55;
+  }
+
+  .footer {
+    text-align: center;
+    color: #33335f;
+    padding: 10px;
+  }
+}
+
+/*-----------------------------------------------------ajuste de tamanho e cor no mobile*/
+
+@media screen and (max-width: 728px) {
+  body {
+    background-color: white;
+  }
+  .inicio {
+    background-color: #f6f6f9;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .textd {
+    font-size: 13px;
+  }
+}
