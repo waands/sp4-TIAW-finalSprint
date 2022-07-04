@@ -1,82 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap%27');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap%27");
 
-.body
-{
-    font-family: 'Roboto', sans-serif;
-    background-color:#F6F6F9;
+.body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f6f6f9;
 }
 
-.title
-{
-    color:#33335F;
-    text-align:center;
-    font-size:24px;
-    margin:20px;
+.title {
+  color: #33335f;
+  text-align: center;
+  font-size: 24px;
+  margin: 20px;
+
+  color: #33335f;
+  font-size: 45px;
 }
 
-.hasaccount
-{
-    color:#9797B0;
-    text-align:center;
-    font-size:14px;
+.hasaccount {
+  color: #9797b0;
+  text-align: center;
+  font-size: 14px;
 }
 
-.text-cad
-{
-    color:#33335F;
-    font-size:15px;
+.text-cad {
+  color: #33335f;
+  font-size: 15px;
 }
 
 #login-box {
-    max-width:1000px;
-    padding: 0px!important;
+  max-width: 1000px;
+  padding: 0px !important;
 }
 
-.form-control
-{
-    border-radius:2px!important;
-    border-color:white!important;
+.form-control {
+  border-radius: 2px !important;
+  border-color: #ededf0;
+  border-radius: 5px !important;
 }
 
-.button-area
-{
-    margin:0px;
-    text-align:center;
+.button-area {
+  margin: 0px;
+  text-align: center;
 }
-.btn-secondary
-{
-    background-color:#F6F6F9!important;
-    border-color:#F6F6F9!important;
-    color:#33335F!important;
-    font-size:20px!important;
-    margin-top:10px;
+.btn-secondary {
+  background-color: #f6f6f9 !important;
+  border-color: #f6f6f9 !important;
+  color: #33335f !important;
+  font-size: 20px !important;
+  margin-top: 10px;
 }
 
-.btn-secondary:hover
-{
-    background-color:#ededf0!important;
+.btn-secondary:hover {
+  background-color: #ededf0 !important;
 }
 
-
-.btn-info
-{
-    background-color:#F6F6F9!important;
-    border-color:#F6F6F9!important;
-    color:#33335F!important;
-    font-size:20px!important;
-    margin-left:10px;
-    margin-top:10px;
+.btn-info {
+  background-color: #f6f6f9 !important;
+  border-color: #f6f6f9 !important;
+  color: #33335f !important;
+  font-size: 20px !important;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
-.btn-info:hover
-{
-    background-color:#ededf0!important;
-}
-
-.footer
-{
-    text-align:center;
-    font-size:16px;
+.btn-info:hover {
+  background-color: #ededf0 !important;
 }
 
 /**
@@ -85,56 +72,59 @@
   */
 
 /*cabecalho + footer*/
-  
-  /*Mobile*/
-  .logo {
+
+/*Mobile*/
+.logo {
+  background-color: #33335f;
+}
+
+.header {
+  padding: 0px !important;
+}
+
+/*imagem*/
+.header img {
+  width: 60%;
+  align-items: left;
+  margin: 0.4em;
+  max-width: 190px;
+}
+
+.logoMobileImg {
+  display: flex;
+}
+
+.logoImg {
+  display: none;
+}
+
+/*Desktop*/
+@media screen and (min-width: 728px) {
+  .header {
     background-color: #33335f;
+    width: 100%;
+    padding: 0px !important;
   }
 
-  .header 
-  {
-      padding:0px!important;
-  }
-  
-  /*imagem*/
   .header img {
-    width: 60%;
+    width: 50%;
+    max-width: 150px;
     align-items: left;
-    margin: 0.4em;
-    max-width: 190px;
+    margin: 0.8em;
   }
-  
+
   .logoMobileImg {
-    display: flex;
-  }
-  
-  .logoImg {
     display: none;
   }
 
-  
-  /*Desktop*/
-  @media screen and (min-width: 728px) {
-
-    .header {
-        background-color: #33335F;
-        width: 100%;
-        padding: 0px!important;
-    }
-
-    .header img {
-      width: 50%;
-      max-width: 150px;
-      align-items: left;
-      margin: 0.8em;
-    }
-  
-    .logoMobileImg {
-      display: none;
-    }
-  
-    .logoImg {
-      display: flex;
-    }
+  .logoImg {
+    display: flex;
   }
-  
+
+  .footer {
+    text-align: center !important;
+    margin-left: auto;
+    color: #33335f;
+    padding: 10px;
+  }
+}

@@ -5,8 +5,6 @@
 //
 // Código LoginApp utilizado como exemplo para alunos de primeiro período
 
-import db from "../database";
-
 // Página inicial de Login
 const LOGIN_URL = "login.html";
 
@@ -38,32 +36,32 @@ function generateUUID() {
 }
 
 // Dados de usuários para serem utilizados como carga inicial
-// const dadosIniciais = {
-//   usuarios: [
-//     {
-//       id: generateUUID(),
-//       login: "admin",
-//       password: "123",
-//       name: "Administrador do Sistema",
-//       email: "admin@abc.com",
-//       birth: "01/01/2001",
-//       tel: "xxx",
-//       createdAt: "01/01/2001",
-//       solutions: 0,
-//     },
-//     {
-//       id: generateUUID(),
-//       login: "user",
-//       senha: "123",
-//       nome: "Usuario Comum",
-//       email: "user@abc.com",
-//       birth: "01/01/2001",
-//       tel: "xxx",
-//       createdAt: "01/01/2001",
-//       solutions: 0,
-//     },
-//   ],
-// };
+const dadosIniciais = {
+  usuarios: [
+    {
+      id: generateUUID(),
+      login: "admin",
+      password: "123",
+      name: "Administrador do Sistema",
+      email: "admin@abc.com",
+      birth: "01/01/2001",
+      tel: "xxx",
+      createdAt: "01/01/2001",
+      solutions: 0,
+    },
+    {
+      id: generateUUID(),
+      login: "user",
+      senha: "123",
+      nome: "Usuario Comum",
+      email: "user@abc.com",
+      birth: "01/01/2001",
+      tel: "xxx",
+      createdAt: "01/01/2001",
+      solutions: 0,
+    },
+  ],
+};
 
 // Inicializa o usuarioCorrente e banco de dados de usuários da aplicação de Login
 function initLoginApp() {
@@ -87,10 +85,10 @@ function initLoginApp() {
     );
 
     // Copia os dados iniciais para o banco de dados
-    db_usuarios = db;
+    db_usuarios = dadosIniciais;
 
     // Salva os dados iniciais no local Storage convertendo-os para string antes
-    localStorage.setItem("db_usuarios", JSON.stringify(db));
+    localStorage.setItem("db_usuarios", JSON.stringify(dadosIniciais));
   } else {
     // Se há dados no localStorage
 

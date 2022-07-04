@@ -13,6 +13,7 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link rel="icon" href="./imgs/icon.png" />
   </head>
   <body>
     <header class="container-fluid header">
@@ -55,62 +56,68 @@
         </div>
       </div>
     </header>
-    <div class = "info col-12 col-lg-8 col-md-10  col-sm-12 mx-auto inicio">
-      <p class = "title">
-          Fórum
+    <div class="info col-12 col-lg-8 col-md-10 col-sm-12 mx-auto inicio">
+      <p class="title">Fórum</p>
+      <p class="textd">
+        Nesta aba, você tanto pode ajudar outros sanando suas dúvidas, ou postar
+        suas duvídas pra sanarem a sua. Lembre-se de manter o respeito e o
+        bom-senso.
       </p>
-      <p class ="textd">
-          Nesta aba, você tanto pode ajudar outros sanando suas dúvidas, ou postar suas duvídas pra sanarem a sua. Lembre-se de manter o respeito e o bom-senso.
-      </p>
-  <!--data selection-->
-  <div class="row col-12 col-lg-6 col-md-10  col-sm-12 mx-auto">
-    <button class = "col-6 bt1 ">Dúvidas e ajuda</button>
-    <button class = "col-6 bt2" id = "bt2">Suporte técnico</button>
-</div>
+      <!--data selection-->
+      <div class="row col-12 col-lg-6 col-md-10 col-sm-12 mx-auto">
+        <button class="col-6 bt1">Dúvidas e ajuda</button>
+        <button class="col-6 bt2" id="bt2">Suporte técnico</button>
+      </div>
+    </div>
 
-  </div>
-
-
-
-  <!--acordion forum-->
-  <!--item_1-->
-  <div class = "col-12 col-lg-8 col-md-10  col-sm-12 mx-auto">
-  <div class="accordion" id="accordionExample">
-      <div id = "pubContent"> 
-        <h2 id="headingOne">
-          <button class= "botao col-12" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              <div class = "dados col-12">
-                  <p class = "titled">Title</p>
-                  <p class ="username">@username</p>
-                  <p class ="description">description,problem, etc</p>
+    <!--acordion forum-->
+    <!--item_1-->
+    <div class="col-12 col-lg-8 col-md-10 col-sm-12 mx-auto">
+      <div class="accordion" id="accordionExample">
+        <div id="pubContent">
+          <h2 id="headingOne">
+            <button
+              class="botao col-12"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              <div class="dados col-12">
+                <p class="titled">Title</p>
+                <p class="username">@username</p>
+                <p class="description">description,problem, etc</p>
               </div>
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-          <div class="ab">
-            <p class ="respostas">Respostas</p>
-            <div class="rusers">
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="ab">
+              <p class="respostas">Respostas</p>
+              <div class="rusers">
+                <div class="blockrep">
+                  <p class="rdescription">description,solution,op,etc</p>
+                  <span class="username">@username</span
+                  ><span class="ts"> typesolution</span>
+                </div>
 
-              <div class = "blockrep">
-                <p class = "rdescription">description,solution,op,etc</p>
-                <span class = "username">@username</span><span class=" ts">  typesolution</span>
+                <div class="blockrep">
+                  <p class="rdescription">description,solution,op,etc</p>
+                  <span class="username">@username</span
+                  ><span class="ts"> typesolution</span>
+                </div>
               </div>
-              
-              <div class = "blockrep">
-                <p class = "rdescription">description,solution,op,etc</p>
-                <span class = "username">@username</span><span class=" ts">  typesolution</span>
-              </div>
-              
             </div>
           </div>
         </div>
-      </div>
 
-
-
-
-      <!--item_2-->
-      <!--<div id = "pubContent"> 
+        <!--item_2-->
+        <!--<div id = "pubContent"> 
         <h2 id="headingTwo">
           <button class= "botao col-12" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               <div class = "dados col-12">
@@ -139,9 +146,7 @@
           </div>
         </div>-->
       </div>
-  </div>
-
-
+    </div>
 
     <footer class="container footer">
       <div class="row">
